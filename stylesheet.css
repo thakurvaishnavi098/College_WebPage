@@ -497,20 +497,65 @@ h3{
     border: 1px solid #ccc;
     block-size: border-box;
 }
+.mode-toggle {
+    cursor: pointer;
+    font-size: 24px;
+    color: #ffffff;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
 
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
 
+body.dark-mode a {
+    color: #ffb400;
+}
 
+body.dark-mode .mode-toggle i {
+    color: #ffb400;
+}
 
+div {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+/* Hover effect for course-col */
+.course-col:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+}
 
+/* Hover effect for campus-col */
+.campus-col:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
+.campus-col .layer {
+    transition: background-color 0.3s ease;
+}
 
+.campus-col:hover .layer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+}
 
+/* Hover effect for facilities-col */
+.facilities-col:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
 
+/* Hover effect for testimonials-col */
+.testimonials-col:hover img {
+    transform: scale(1.1);
+    border-radius: 50%;
+}
 
-
-
-
-
-
-
+.testimonials-col:hover div {
+    color: #007bff;
+}
