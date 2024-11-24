@@ -11,6 +11,10 @@
 family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
  rel="stylesheet">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200..1000&family=Poppins:wght@100..900&display=swap" rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+
 </head>
 <body>
 <section class="sub-header">
@@ -25,6 +29,9 @@ family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1
             <li><a href="Blog.html">BLOG</a></li>
             <li><a href="Contact.html">CONTACT</a></li>
         </ul>
+    </div>
+    <div class="mode-toggle">
+        <i id="mode-icon" class="ri-moon-line"></i>
     </div>
     <i class="fa-solid fa-bars" onclick="showMenu()"></i>
 </nav>
@@ -111,6 +118,20 @@ family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1
     function hideMenu(){
         navLinks.style.right = "-200px"; 
     }
+
+    const modeIcon = document.getElementById("mode-icon");
+    const body = document.body;
+
+    modeIcon.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        // Toggle the icon
+        if (body.classList.contains("dark-mode")) {
+            modeIcon.classList.replace("ri-moon-line", "ri-sun-line");
+        } else {
+            modeIcon.classList.replace("ri-sun-line", "ri-moon-line");
+        }
+    });
 
 </script>
 
